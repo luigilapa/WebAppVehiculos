@@ -21,16 +21,16 @@
                                     Vehículo
                                 </th>
                                 <th>
-                                    Tipo Mantenimiento
+                                    Tipo
                                 </th>
                                 <th>
-                                    Detalle
+                                    Subtipo
                                 </th>
                                 <th>
                                     Fecha Ingreso
                                 </th>
                                 <th>
-                                    Fecha Estimada Salida
+                                    Fecha Salida
                                 </th>
                                 <th>
                                    Aprobado
@@ -56,7 +56,7 @@
                                         @Html.DisplayFor(modelItem => item.TipoMantenimiento)
                                     </td>
                                     <td>
-                                        @Html.DisplayFor(modelItem => item.Detalle)
+                                        @Html.DisplayFor(modelItem => item.SubTipoMantimiento)
                                     </td>
                                     <td>
                                          @Convert.ToDateTime((@item.FechaIngreso.ToShortDateString())).ToShortDateString() 

@@ -25,32 +25,43 @@ namespace Inspinia_MVC5.Controllers
         }
 
         [PermisoAttribute(Accion = "Create", Controlador = "SolicitudMantenimiento")]
-        public ActionResult Create()
+        public ActionResult Create(SolicitudMantenimiento solicitudMantenimiento = null, bool xyz = false)
         {
 
             Usuario usu = (Usuario)Session["Usuario"];
 
             ViewBag.IdChofer = new SelectList(db.Usuario.Where(x=>x.IdUsuario == usu.IdUsuario), "IdUsuario", "Nombres");
-            ViewBag.IdVehiculo = new SelectList(db.VehiculoChofer.Where(x=>x.IdChofer == usu.IdUsuario && x.Activo == true).Select(x => new { idVehiculo = x.Vehiculo.idVehiculo, placa = x.Vehiculo.placaLetras + x.Vehiculo.placaNumeros }), "idVehiculo", "placa");
+            ViewBag.IdVehiculo = new SelectList(db.VehiculoChofer.Where(x=>x.IdChofer == usu.IdUsuario && x.Activo == true)
+                                                                .Select(x => new { idVehiculo = x.Vehiculo.idVehiculo, placa = x.Vehiculo.placaLetras + x.Vehiculo.placaNumeros }), "idVehiculo", "placa");
+            if (solicitudMantenimiento.TipoMantenimiento == null)
+            {
+                solicitudMantenimiento.TipoMantenimiento = "MANPRE";
+            }
 
-            //string[] tipoManPre = db.Parametros.Where(x => x.codigo == "MANPRE").Select(x => x.valor_cadena_1).FirstOrDefault().Split(';');
-            ////string[] tipoManCor = db.Parametros.Where(x => x.codigo == "MANCOR").Select(x => x.valor_cadena_1).FirstOrDefault().Split(';');
+            ViewBag.TipoMantenimiento = new SelectList(db.Parametros.Where(x => x.codigo == "MANPRE" || x.codigo == "MANCOR" && x.activo == true)
+                                                                    .Select(x => new { codigo = x.codigo, valor = x.valor_cadena_1 }),"codigo","valor");
+            string[] subMan = db.Parametros.Where(x => x.codigo == solicitudMantenimiento.TipoMantenimiento && x.activo == true).Select(x => x.valor_cadena_2).FirstOrDefault().Split(';');
+            ViewBag.SubTipoMantimiento = new SelectList(subMan.Select((r, index) => new { Text = r, Value = index }), "Text", "Text");
 
-            //string[] subManPre = db.Parametros.Where(x => x.codigo == "MANPRE").Select(x => x.valor_cadena_2).FirstOrDefault().Split(';');
-            ////string[] subManCor = db.Parametros.Where(x => x.codigo == "MANCOR").Select(x => x.valor_cadena_2).FirstOrDefault().Split(';');
+            if (solicitudMantenimiento.FechaIngreso < DateTime.Today.AddYears(-1000))
+            {
+                solicitudMantenimiento.FechaIngreso = DateTime.Today;
+                solicitudMantenimiento.FechaEstimadaSalida = DateTime.Today.AddDays(1);
+            }
 
-            ////new SelectList(db.Rol.Where(x=>x.Activo == true).OrderBy(x=>x.NombreRol), "IdRol", "NombreRol", id);
-            //ViewBag.TipoMantenimeinto = new SelectList(tipoManPre, "TipoMantenimeinto");
-            //ViewBag.SubTipoMantimiento = new SelectList(subManPre, "SubTipoMantimiento");
+           return View(solicitudMantenimiento);
+            
+        }
 
-            //ViewBag.TipoMantenimeinto = new SelectList(tipoManPre, "TipoMantenimeinto");
-
-            return View();
+        [HttpPost]
+        public ActionResult ComboMantenimiento(SolicitudMantenimiento solicitudMantenimiento)
+        {
+            return RedirectToAction("Create", solicitudMantenimiento);
         }
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<ActionResult> Create([Bind(Include="IdSolicitud,IdVehiculo,IdChofer,TipoMantenimiento,Detalle,FechaIngreso,FechaEstimadaSalida")] SolicitudMantenimiento solicitudMantenimiento)
+        public async Task<ActionResult> Create(SolicitudMantenimiento solicitudMantenimiento)
         {
             if (ModelState.IsValid)
             {
@@ -63,6 +74,12 @@ namespace Inspinia_MVC5.Controllers
             Usuario usu = (Usuario)Session["Usuario"];
             ViewBag.IdChofer = new SelectList(db.Usuario.Where(x => x.IdUsuario == usu.IdUsuario), "IdUsuario", "Nombres");
             ViewBag.IdVehiculo = new SelectList(db.VehiculoChofer.Where(x => x.IdChofer == usu.IdUsuario && x.Activo == true).Select(x => new { idVehiculo = x.Vehiculo.idVehiculo, placa = x.Vehiculo.placaLetras + x.Vehiculo.placaNumeros }), "idVehiculo", "placa");
+
+            ViewBag.TipoMantenimiento = new SelectList(db.Parametros.Where(x => x.codigo == "MANPRE" || x.codigo == "MANCOR" && x.activo == true)
+                                                                    .Select(x => new { codigo = x.codigo, valor = x.valor_cadena_1 }), "codigo", "valor", solicitudMantenimiento.TipoMantenimiento);
+            string[] subMan = db.Parametros.Where(x => x.codigo == solicitudMantenimiento.TipoMantenimiento && x.activo == true).Select(x => x.valor_cadena_2).FirstOrDefault().Split(';');
+            ViewBag.SubTipoMantimiento = new SelectList(subMan.Select((r, index) => new { Text = r, Value = index }), "Text", "Text", solicitudMantenimiento.SubTipoMantimiento);
+
             return View(solicitudMantenimiento);
         }
 

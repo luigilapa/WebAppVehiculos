@@ -18,3 +18,13 @@ C:\Users\lpalma\Desktop\TQ\WebAppVehiculos\Modelo\obj\Debug\Modelo.csprojResolve
 C:\Users\lpalma\Desktop\TQ\WebAppVehiculos\Modelo\obj\Debug\Modelo.dll
 C:\Users\lpalma\Desktop\TQ\WebAppVehiculos\Modelo\obj\Debug\Modelo.pdb
 C:\Users\luigi\Desktop\WebAppVehiculos\Modelo\obj\Debug\Modelo.csprojResolveAssemblyReference.cache
+D:\GitHub\WebAppVehiculos\Modelo\bin\Debug\Modelo.dll.config
+D:\GitHub\WebAppVehiculos\Modelo\bin\Debug\Modelo.dll
+D:\GitHub\WebAppVehiculos\Modelo\bin\Debug\Modelo.pdb
+D:\GitHub\WebAppVehiculos\Modelo\bin\Debug\EntityFramework.dll
+D:\GitHub\WebAppVehiculos\Modelo\bin\Debug\EntityFramework.SqlServer.dll
+D:\GitHub\WebAppVehiculos\Modelo\bin\Debug\EntityFramework.xml
+D:\GitHub\WebAppVehiculos\Modelo\bin\Debug\EntityFramework.SqlServer.xml
+D:\GitHub\WebAppVehiculos\Modelo\obj\Debug\Modelo.csprojResolveAssemblyReference.cache
+D:\GitHub\WebAppVehiculos\Modelo\obj\Debug\Modelo.dll
+D:\GitHub\WebAppVehiculos\Modelo\obj\Debug\Modelo.pdb

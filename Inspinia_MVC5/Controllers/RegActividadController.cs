@@ -63,7 +63,7 @@ namespace Inspinia_MVC5.Controllers
                     registro.Activo = true;
                     db.RegistroActividad.Add(registro);
                     db.SaveChanges();
-                    return RedirectToAction("Index");
+                    return RedirectToAction("CreateEdit", new { id = registro.IdRegistro });
                 }
                 else
                 {
@@ -76,7 +76,7 @@ namespace Inspinia_MVC5.Controllers
                     reg.KmFinal = registro.KmFinal;
 
                     db.SaveChanges();
-                    return RedirectToAction("Index");
+                    return RedirectToAction("CreateEdit", new { id = reg.IdRegistro });
                 }
             }
             Usuario usu = (Usuario)Session["Usuario"];

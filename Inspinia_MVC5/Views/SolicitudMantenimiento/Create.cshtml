@@ -32,15 +32,17 @@
 
             <div class="form-group">
                 @Html.LabelFor(model => model.TipoMantenimiento, "Tipo Mantenimiento", htmlAttributes: new { @class = "control-label col-md-2" })
-                <div class="col-md-2">
-                    @*@Html.DropDownList("TipoMantenimiento", null, htmlAttributes: new { @class = "form-control" })
-                @Html.ValidationMessageFor(model => model.TipoMantenimiento)*@
-                    <select id="TipoMantenimiento" name="TipoMantenimiento" class="form-control">
-                        <option value="Correctivo">Correctivo</option>
-                        <option value="Preventivo">Preventivo</option>
-                    </select>
+                <div class="col-md-4">
+                        @Html.DropDownList("TipoMantenimiento", null, htmlAttributes: new { @class = "form-control", @onchange = "this.form.action='ComboMantenimiento';this.form.submit();" })
                 </div>
             </div>
+            <div class="form-group">
+                @Html.LabelFor(model => model.TipoMantenimiento, "Tipo Mantenimiento", htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-4">
+                    @Html.DropDownList("SubTipoMantimiento", null, htmlAttributes: new { @class = "form-control" })
+                </div>
+            </div>
+
 
             <div class="form-group">
                 @Html.LabelFor(model => model.Detalle, htmlAttributes: new { @class = "control-label col-md-2" })
@@ -54,7 +56,7 @@
                 @Html.LabelFor(model => model.FechaIngreso, "Fecha Ingreso", new { @class = "control-label col-md-2" })
                 <div class="input-group date col-md-2">
                     <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
-                    @Html.EditorFor(model => model.FechaIngreso)
+                    @Html.TextBoxFor(model => model.FechaIngreso, "{0:dd/MM/yyyy}", new { htmlAttributes = new { @class = "form-control" } })
                     @Html.ValidationMessageFor(model => model.FechaIngreso, "", new { @class = "text-danger" })
                 </div>
             </div>
@@ -63,7 +65,7 @@
                 @Html.LabelFor(model => model.FechaEstimadaSalida, "Fecha Estimada Salida", new { @class = "control-label col-md-2" })
                 <div class="input-group date col-md-2">
                     <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
-                    @Html.EditorFor(model => model.FechaEstimadaSalida, "", new { @class = "text-danger" })
+                    @Html.TextBoxFor(model => model.FechaEstimadaSalida, "{0:dd/MM/yyyy}", new { htmlAttributes = new { @class = "form-control" } })
                 </div>
             </div>
 
