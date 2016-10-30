@@ -21,6 +21,23 @@ namespace Inspinia_MVC5.Controllers
         public async Task<ActionResult> Index()
         {
             var solicitudmantenimiento = db.SolicitudMantenimiento.Where(x=>x.Activo == true && x.Desaprobado == false).Include(s => s.Usuario).Include(s => s.Vehiculo);
+
+            foreach (var s in solicitudmantenimiento)
+            {
+                if (s.TipoMantenimiento == null)
+                {
+                    continue;
+                }
+                if (s.TipoMantenimiento.Trim().Equals("MANPRE"))
+                {
+                    s.TipoMantenimiento = "Mantenimiento Preventivo";
+                }
+                else if (s.TipoMantenimiento.Trim().Equals("MANCOR"))
+                {
+                    s.TipoMantenimiento = "Mantenimiento Correctivo";
+                }
+            }
+            
             return View(await solicitudmantenimiento.ToListAsync());
         }
 
@@ -65,10 +82,18 @@ namespace Inspinia_MVC5.Controllers
         {
             if (ModelState.IsValid)
             {
-                solicitudMantenimiento.Activo = true;
-                db.SolicitudMantenimiento.Add(solicitudMantenimiento);
-                await db.SaveChangesAsync();
-                return RedirectToAction("Index");
+                try
+                {
+                    solicitudMantenimiento.Activo = true;
+                    db.SolicitudMantenimiento.Add(solicitudMantenimiento);
+                    await db.SaveChangesAsync();
+                    return RedirectToAction("Index");
+                }
+                catch (Exception)
+                {
+                    ModelState.AddModelError("", "Verifique la información relacionada con los datos, no se ha logrado completar la acción.");
+                }
+                
             }
 
             Usuario usu = (Usuario)Session["Usuario"];

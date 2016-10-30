@@ -89,6 +89,30 @@
 
 @section Scripts {
     @Scripts.Render("~/bundles/jqueryval")
+    
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#FechaIngreso').val(FormatoFecha($('#FechaIngreso').val()));
+            $('#FechaEstimadaSalida').val(FormatoFecha($('#FechaEstimadaSalida ').val()));
+        });
+
+        function FormatoFecha(x) {
+            var d = new Date(x);
+            var dia = d.getDate();
+            var mes = d.getMonth() + 1;
+            var anio = d.getFullYear();
+            if (!isNaN(dia)) {
+                var dia = d.getDate();
+                var mes = d.getMonth() + 1;
+                var anio = d.getFullYear();
+
+                return dia + "/" + mes + "/" + anio;
+            }
+            else {
+                return x;
+            }
+        }
+    </script>
 }
 
 

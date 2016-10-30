@@ -232,3 +232,43 @@ D:\GitHub\WebAppVehiculos\Inspinia_MVC5\obj\Debug\RdlCompile.cache
 D:\GitHub\WebAppVehiculos\Inspinia_MVC5\obj\Debug\RdlCompile.compiled
 D:\GitHub\WebAppVehiculos\Inspinia_MVC5\obj\Debug\Inspinia_MVC5.dll
 D:\GitHub\WebAppVehiculos\Inspinia_MVC5\obj\Debug\Inspinia_MVC5.pdb
+D:\De Luigi\github\WebAppVehiculos\Inspinia_MVC5\bin\Inspinia_MVC5.dll.config
+D:\De Luigi\github\WebAppVehiculos\Inspinia_MVC5\bin\Inspinia_MVC5.dll
+D:\De Luigi\github\WebAppVehiculos\Inspinia_MVC5\bin\Inspinia_MVC5.pdb
+D:\De Luigi\github\WebAppVehiculos\Inspinia_MVC5\bin\Antlr3.Runtime.dll
+D:\De Luigi\github\WebAppVehiculos\Inspinia_MVC5\bin\EntityFramework.dll
+D:\De Luigi\github\WebAppVehiculos\Inspinia_MVC5\bin\EntityFramework.SqlServer.dll
+D:\De Luigi\github\WebAppVehiculos\Inspinia_MVC5\bin\Microsoft.Web.Infrastructure.dll
+D:\De Luigi\github\WebAppVehiculos\Inspinia_MVC5\bin\Modelo.dll
+D:\De Luigi\github\WebAppVehiculos\Inspinia_MVC5\bin\Newtonsoft.Json.dll
+D:\De Luigi\github\WebAppVehiculos\Inspinia_MVC5\bin\PagedList.dll
+D:\De Luigi\github\WebAppVehiculos\Inspinia_MVC5\bin\PagedList.Mvc.dll
+D:\De Luigi\github\WebAppVehiculos\Inspinia_MVC5\bin\System.Web.Helpers.dll
+D:\De Luigi\github\WebAppVehiculos\Inspinia_MVC5\bin\System.Web.Mvc.dll
+D:\De Luigi\github\WebAppVehiculos\Inspinia_MVC5\bin\System.Web.Optimization.dll
+D:\De Luigi\github\WebAppVehiculos\Inspinia_MVC5\bin\System.Web.Razor.dll
+D:\De Luigi\github\WebAppVehiculos\Inspinia_MVC5\bin\System.Web.WebPages.Deployment.dll
+D:\De Luigi\github\WebAppVehiculos\Inspinia_MVC5\bin\System.Web.WebPages.dll
+D:\De Luigi\github\WebAppVehiculos\Inspinia_MVC5\bin\System.Web.WebPages.Razor.dll
+D:\De Luigi\github\WebAppVehiculos\Inspinia_MVC5\bin\WebGrease.dll
+D:\De Luigi\github\WebAppVehiculos\Inspinia_MVC5\bin\Modelo.pdb
+D:\De Luigi\github\WebAppVehiculos\Inspinia_MVC5\bin\Antlr3.Runtime.pdb
+D:\De Luigi\github\WebAppVehiculos\Inspinia_MVC5\bin\EntityFramework.xml
+D:\De Luigi\github\WebAppVehiculos\Inspinia_MVC5\bin\EntityFramework.SqlServer.xml
+D:\De Luigi\github\WebAppVehiculos\Inspinia_MVC5\bin\Newtonsoft.Json.xml
+D:\De Luigi\github\WebAppVehiculos\Inspinia_MVC5\bin\PagedList.xml
+D:\De Luigi\github\WebAppVehiculos\Inspinia_MVC5\bin\PagedList.Mvc.xml
+D:\De Luigi\github\WebAppVehiculos\Inspinia_MVC5\bin\System.Web.Helpers.xml
+D:\De Luigi\github\WebAppVehiculos\Inspinia_MVC5\bin\System.Web.Mvc.xml
+D:\De Luigi\github\WebAppVehiculos\Inspinia_MVC5\bin\System.Web.Optimization.xml
+D:\De Luigi\github\WebAppVehiculos\Inspinia_MVC5\bin\System.Web.Razor.xml
+D:\De Luigi\github\WebAppVehiculos\Inspinia_MVC5\bin\System.Web.WebPages.xml
+D:\De Luigi\github\WebAppVehiculos\Inspinia_MVC5\bin\System.Web.WebPages.Deployment.xml
+D:\De Luigi\github\WebAppVehiculos\Inspinia_MVC5\bin\System.Web.WebPages.Razor.xml
+D:\De Luigi\github\WebAppVehiculos\Inspinia_MVC5\bin\pl\System.Web.Optimization.resources.dll
+D:\De Luigi\github\WebAppVehiculos\Inspinia_MVC5\bin\pl\System.Web.Razor.resources.dll
+D:\De Luigi\github\WebAppVehiculos\Inspinia_MVC5\obj\Debug\Inspinia_MVC5.csprojResolveAssemblyReference.cache
+D:\De Luigi\github\WebAppVehiculos\Inspinia_MVC5\obj\Debug\RdlCompile.cache
+D:\De Luigi\github\WebAppVehiculos\Inspinia_MVC5\obj\Debug\RdlCompile.compiled
+D:\De Luigi\github\WebAppVehiculos\Inspinia_MVC5\obj\Debug\Inspinia_MVC5.dll
+D:\De Luigi\github\WebAppVehiculos\Inspinia_MVC5\obj\Debug\Inspinia_MVC5.pdb

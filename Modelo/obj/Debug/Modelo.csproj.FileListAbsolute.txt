@@ -28,3 +28,12 @@ D:\GitHub\WebAppVehiculos\Modelo\bin\Debug\EntityFramework.SqlServer.xml
 D:\GitHub\WebAppVehiculos\Modelo\obj\Debug\Modelo.csprojResolveAssemblyReference.cache
 D:\GitHub\WebAppVehiculos\Modelo\obj\Debug\Modelo.dll
 D:\GitHub\WebAppVehiculos\Modelo\obj\Debug\Modelo.pdb
+D:\De Luigi\github\WebAppVehiculos\Modelo\bin\Debug\Modelo.dll.config
+D:\De Luigi\github\WebAppVehiculos\Modelo\bin\Debug\Modelo.dll
+D:\De Luigi\github\WebAppVehiculos\Modelo\bin\Debug\Modelo.pdb
+D:\De Luigi\github\WebAppVehiculos\Modelo\bin\Debug\EntityFramework.dll
+D:\De Luigi\github\WebAppVehiculos\Modelo\bin\Debug\EntityFramework.SqlServer.dll
+D:\De Luigi\github\WebAppVehiculos\Modelo\bin\Debug\EntityFramework.xml
+D:\De Luigi\github\WebAppVehiculos\Modelo\bin\Debug\EntityFramework.SqlServer.xml
+D:\De Luigi\github\WebAppVehiculos\Modelo\obj\Debug\Modelo.dll
+D:\De Luigi\github\WebAppVehiculos\Modelo\obj\Debug\Modelo.pdb
